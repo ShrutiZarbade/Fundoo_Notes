@@ -1,12 +1,38 @@
-<form action="" method="post">
-    <div class="container">
-    <h3> Login Page </h3>
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder=" " name="uname" required>
-    <br>   </br>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder=" " name="psw" required>
-    <br>  </br>
-    <button type="submit">Login</button>
-    </div>
-    </form>
+{% extends "base.html" %}
+{% block body %}
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+</head>
+   <div class="row">
+       <center><div class="col-sm-6">
+           <form method="POST" action=""><p>
+               <h2 style="color:black;text-align:center;"><u><b>Login</b></u></h2>
+               <label for="username"> USERNAME </label>
+               <input type="text" name="username" placeholder="username" required><br><br>
+               <label for="password"> PASSWORD </label>
+               <input type="password" name="password" placeholder="password" required><br><br>
+               <input type="submit" class="sub" name="Login" placeholder="login">
+           </form>
+       </div></center>
+   </div>
+
+{% endblock %}
+
+
+
+
+<!--<form action="/login" method="post">-->
+<!--    <div class="container">-->
+<!--    <h3> Login Page </h3>-->
+<!--    <label for="email"><b>email</b></label>-->
+<!--    <input type="text" placeholder=" " name="email" required>-->
+<!--    <br>   </br>-->
+<!--    <label for="password"><b>Password</b></label>-->
+<!--    <input type="password" placeholder=" " name="password" required>-->
+<!--    <br>  </br>-->
+<!--    <button type="submit">Login</button>-->
+<!--    </div>-->
+<!--    </form>-->

@@ -1,7 +1,7 @@
 from response import Response
-from config.redis_connection import Redis
+from config.redis_connection import RedisConnection
 import jwt
-redis_obj = Redis()
+redis_obj = RedisConnection()
 
 response = {
     'message': "something went wrong"
@@ -13,7 +13,7 @@ def login_required(method):
     def token_verification(self):
         try:
             print(self.path, type(self.path))
-            if self.path is ['/createnotes', '/readnotes']:
+            if self.path is ['/createnotes', '/readnotes', '/update_note']:
                 token = self.headers['token']
                 print(token)
                 payload = jwt.decode(token, 'secret', algorithms=['HS256'])

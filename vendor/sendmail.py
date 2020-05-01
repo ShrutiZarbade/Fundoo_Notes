@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-class SmtpSendMail:
+class SendMail:
 
     # @staticmethod
     def send_mail(self, user_email, message):
@@ -14,8 +14,8 @@ class SmtpSendMail:
         msg = MIMEMultipart()
         message = message
 
-        password = os.getenv('password')
-        msg['From'] = os.getenv('email_from')
+        password = os.getenv("password")
+        msg['From'] = os.getenv("msg['From']")
         msg['To'] = user_email
         msg['Subject'] = "Link"
 

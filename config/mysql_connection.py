@@ -1,71 +1,49 @@
-import mysql.connector
-from model.db_query import DbOperation
-query_obj = DbOperation()
-# import os
+"""
+This is file indicates for mysql connection
+Author: Shruti Zarbade
+"""
+import os
 from dotenv import load_dotenv
+import mysql.connector
+from config.singleton import singleton
 load_dotenv()
 
 
-class MysqlCon:
+@singleton
+class Connection:
 
-    def __init__(self, host='localhost', port=6379, db=0, ):
-        self.host = host
-        self.port = port
-        self.db = db
-        self.connection = self.connect()
+    def __init__(self, **kwargs):
+        self.connection = self.connect(**kwargs)
+        self.mycursor = self.connection.cursor()
 
+    # this function create the connection
     def connect(self, **kwargs):
         mydb = mysql.connector.connect(
-            host="127.0.0.1",
-            user="root",
-            passwd="password",
-            database="fundoo_db"
+            host=kwargs['host'],
+            user=kwargs['user'],
+            passwd=kwargs['passwd'],
+            database=kwargs['database']
         )
         return mydb
 
-    def create(self):
-        pass
+    # this function fetch the data from the database
+    def run_query(self, query, value=None):
+        self.mycursor.execute(query, value)
+        return self.mycursor.fetchall()
 
-    def insert(self, data, table_name):
-
-        sql, val = query_obj.insert_data(data=data, table_name=table_name)
-        self.mycursor = self.connection.cursor()
-        self.mycursor.execute(sql, val)
+    # this function executes the data in database
+    def query_execute(self, query,value=None):
+        self.mycursor.execute(query,value)
         self.connection.commit()
 
-    def read(self, table_name, column_name, column_val):
-        query = query_obj.read_data(table_name, column_name, column_val)
-        self.mycursor = self.connection.cursor()
-        self.mycursor.execute(query)
-        data = self.mycursor.fetchall()
-        return data
-
-    def update(self, data, table_name):
-        sql, val = query_obj.update_data(data, table_name)
-        self.mycursor = self.connection.cursor()
-        self.mycursor.execute(sql, val)
-        self.connection.commit()
-
-    def delete(self, table_name, del_id):
-        sql = query_obj.delete_data(table_name, del_id)
-        self.mycursor = self.connection.cursor()
-        self.mycursor.execute(sql)
-        self.connection.commit()
-
-    def last_data(self):
-        sql = query_obj.read_last_data()
-        self.mycursor = self.connection.cursor()
-        self.mycursor.execute(sql)
-        data = self.mycursor.fetchone()
-        return data
-
-    def drop(self, table_name=None):
-        pass
-
+    # this function is to disconnect the connection
     def disconnect(self):
         self.connection.close()
 
 
-db_obj = MysqlCon()
-con = db_obj.connection
+con = Connection(host=os.getenv("mysql_host"),
+                 user=os.getenv("mysql_user"),
+                 passwd=os.getenv("mysql_passwd"),
+                 database=os.getenv("mysql_database"))
+
 

@@ -3,11 +3,19 @@ This is the file for Database operation in which various mysql query is written
 Author: Shruti Zarbade
 Date: 10/3/2020
 """
+from config.mysql_connection import Connection
 
 
-class DbOperation:
+class Query:  # data access layer
+    """
+        This class define all the mysql query in which
+        all the query are dynamic and used for all tables into the database.
+    """
+    def __init__(self):
+        self.mydb = Connection()
 
-    def insert_data(self, data, table_name):
+    # query for inserting data into table
+    def insert(self, data, table_name):
         column = []
         rows_values = []
         val = []
@@ -16,22 +24,24 @@ class DbOperation:
             rows_values.append("%s")
             val.append(values)
         column = ','.join(column)
-        print(column, '==========>column')
         val_ = ','.join(['%s']*len(val))
-        print(val_, "==========>val_")
         query = f''' Insert into %s (%s) values (%s)''' % (table_name, column, val_)
-        print(query, val, "========>>query")
-        return query, val
+        self.mydb.query_execute(query, value=val)
 
-    def read_data(self, table_name, column_name, column_val):
-        print(table_name, column_name, column_val)
+    # query for reading data from database
+    def read(self, table_name, column_name, column_val):
+        val = (column_val, )
         if column_val is None and column_name is None:
-            sql = f"SELECT * FROM {table_name}"
-        else:
-            sql = f" SELECT * FROM {table_name} WHERE {column_name}={column_val}"
-        return sql
+            query = f"SELECT * FROM {table_name}"
+            result = self.mydb.run_query(query)
 
-    def update_data(self, data, table_name):
+        else:
+            query = f"SELECT * FROM {table_name} WHERE {column_name}= %s"
+            result = self.mydb.run_query(query, value=val)
+        return result
+
+    # query for updating data into the database
+    def update(self, data, table_name):
         column = []
         rows_values = []
         val = []
@@ -46,27 +56,12 @@ class DbOperation:
 
         val.append(id)
         set_tokens = ','.join([f'{x}=%s' for x in column])
-        print(set_tokens, '----set_t')
-        sql = f"UPDATE {table_name} SET {set_tokens} WHERE id = %s"
-        print(sql, '---->q')
-        print(val, '---->val')
+        query = f"UPDATE {table_name} SET {set_tokens} WHERE id = %s"
+        self.mydb.query_execute(query,value=val)
 
-        return sql, val
+    # query for deleting data from the database
+    def delete(self, table_name, del_id):
 
-    def delete_data(self, table_name, del_id):
-
-        sql = f"DELETE FROM {table_name} WHERE id={del_id}"
-        return sql
-
-    def update_note(self, user_id):
-        sql = f"UPDATE title,description,colour from note WHERE user_id={user_id}"
-        return sql
-
-    def read_par_data(self, email):
-        sql = f"SELECT * FROM users WHERE email='"+email+"'"
-        return sql
-
-    def read_last_data(self):
-        sql = f"SELECT id, email FROM user WHERE id=(SELECT MAX(id) FROM user)"
-        return sql
+        query = f"DELETE FROM {table_name} WHERE id={del_id}"
+        self.mydb.query_execute(query, value=None)
 

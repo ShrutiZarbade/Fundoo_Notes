@@ -1,7 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91d5cb5c-4449-462d-a1d2-700a451a626c" name="Default Changelist" comment="" />
+    <list default="true" id="91d5cb5c-4449-462d-a1d2-700a451a626c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/views/users_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Fundoo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Fundoo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/login_required.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth/login_required.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mysql_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/mysql_connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/redis_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/redis_connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/activate.csh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/activate.fish" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/activate_this.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/chardetect" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/dotenv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/easy_install" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/easy_install-3.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/pip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/pip3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/pip3.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/pyjwt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/python" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/python-config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/python2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/python2.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/python3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/python3.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/bin/wheel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/include/python2.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/include/python3.6m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/local/bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/local/include" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/local/lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/CacheControl-0.11.7-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/appdirs-1.4.3-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/certifi-2018.1.18-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/chardet-3.0.4-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/colorama-0.3.7-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/distlib-0.2.6-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/distro-1.0.1-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/html5lib-0.999999999-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/idna-2.6-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/ipaddress-0.0.0-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/lockfile-0.12.2-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/packaging-17.1-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/pip-9.0.1-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/pkg_resources-0.0.0-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/progress-1.2-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/pyparsing-2.2.0-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/requests-2.18.4-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/retrying-1.3.3-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/setuptools-39.0.1-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/six-1.11.0-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/urllib3-1.22-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/webencodings-0.5-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundoo_env/share/python-wheels/wheel-0.30.0-py2.py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/db_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/db_query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/notes_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/notes_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forgot password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forgot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sendmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/sendmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/notes_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/notes_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user_validation.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +75,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectId" id="1YT5TEBh5VifXXJCGZBLGU6ycGy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,65 +100,23 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chatapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web scraping" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.update">
-    <configuration name="dbconnection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.server_debug">
+    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Fundoo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/dbconnection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mysql_connection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Fundoo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/config" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/mysql_connection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="routes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Fundoo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\hp-pc\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/routes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -91,7 +125,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="update" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="fundoorun" type="PythonConfigurationType" factoryName="Python">
+      <module name="Fundoo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\hp-pc\PycharmProjects\Fundoo_Notes\fundoonote\fundo_env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="notes_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Fundoo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,11 +154,76 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/services" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/update.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/services/notes_service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="request_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Fundoo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\hp-pc\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/request_practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fundoo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\hp-pc\PycharmProjects\Fundoo_Notes\fundoonote\fundo_env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server_debug" type="PythonConfigurationType" factoryName="Python" show_console_on_std_err="true" show_console_on_std_out="true">
+      <output_file is_save="true" />
+      <log_file alias="log_debug" path="$PROJECT_DIR$" />
+      <module name="Fundoo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\hp-pc\PycharmProjects\Fundoo_Notes\fundoonote\fundo_env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,13 +253,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.demo" />
+      <item itemvalue="Python.fundoorun" />
+      <item itemvalue="Python.notes_service" />
+      <item itemvalue="Python.request_practice" />
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.server_debug" />
+      <item itemvalue="Python.user_service" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.update" />
-        <item itemvalue="Python.routes" />
-        <item itemvalue="Python.mysql_connection" />
+        <item itemvalue="Python.server" />
+        <item itemvalue="Python.notes_service" />
         <item itemvalue="Python.user_service" />
-        <item itemvalue="Python.dbconnection" />
+        <item itemvalue="Python.demo" />
+        <item itemvalue="Python.request_practice" />
       </list>
     </recent_temporary>
   </component>
@@ -156,54 +285,142 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="132" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583146567639">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state x="73" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585641715280">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="73" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585641715280" />
     <state x="132" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1213.997@67.27.1213.997" timestamp="1583146567639" />
-    <state x="369" y="330" width="612" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583234081192">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state x="340" y="221" width="612" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585544255468">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="340" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1585544255468" />
     <state x="369" y="330" width="612" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1213.997@67.27.1213.997" timestamp="1583234081192" />
-    <state x="457" y="283" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584442029219">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state x="402" y="0" key="#db_query" timestamp="1584991368219">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="402" y="0" key="#db_query/0.0.1366.728@0.0.1366.728" timestamp="1584991368219" />
+    <state x="402" y="0" key="#demo" timestamp="1585137637348">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="0" key="#demo/0.0.1366.728@0.0.1366.728" timestamp="1585137637348" />
+    <state x="402" y="0" key="#mysql_connection" timestamp="1584991772779">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="0" key="#mysql_connection/0.0.1366.728@0.0.1366.728" timestamp="1584991772779" />
+    <state x="402" y="0" key="#request_practice" timestamp="1585132152922">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="0" key="#request_practice/0.0.1366.728@0.0.1366.728" timestamp="1585132152922" />
+    <state x="402" y="0" key="#users" timestamp="1584802935781">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="0" key="#users.py" timestamp="1584802963631">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="0" key="#users.py/0.0.1366.728@0.0.1366.728" timestamp="1584802963631" />
+    <state x="402" y="0" key="#users/0.0.1366.728@0.0.1366.728" timestamp="1584802935781" />
+    <state x="439" y="187" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586013917485">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="439" y="187" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586013917485" />
     <state x="457" y="283" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1584442029219" />
-    <state width="1190" height="333" key="GridCell.Tab.0.bottom" timestamp="1584427085598">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state width="1344" height="245" key="GridCell.Tab.0.bottom" timestamp="1585642419492">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1344" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585642419492" />
     <state width="1190" height="333" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1584427085598" />
-    <state width="1190" height="333" key="GridCell.Tab.0.center" timestamp="1584427085596">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state width="1344" height="245" key="GridCell.Tab.0.center" timestamp="1585642419491">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1344" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585642419491" />
     <state width="1190" height="333" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1584427085596" />
-    <state width="1190" height="333" key="GridCell.Tab.0.left" timestamp="1584427085594">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state width="1344" height="245" key="GridCell.Tab.0.left" timestamp="1585642419490">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1344" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585642419490" />
     <state width="1190" height="333" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1584427085594" />
-    <state width="1190" height="333" key="GridCell.Tab.0.right" timestamp="1584427085597">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state width="1344" height="245" key="GridCell.Tab.0.right" timestamp="1585642419491">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1344" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585642419491" />
     <state width="1190" height="333" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1584427085597" />
-    <state x="163" y="160" key="SettingsEditor" timestamp="1583241609611">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state width="1344" height="245" key="GridCell.Tab.1.bottom" timestamp="1585642419493">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1344" height="245" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585642419493" />
+    <state width="1344" height="245" key="GridCell.Tab.1.center" timestamp="1585642419492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="245" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585642419492" />
+    <state width="1344" height="245" key="GridCell.Tab.1.left" timestamp="1585642419492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="245" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585642419492" />
+    <state width="1344" height="245" key="GridCell.Tab.1.right" timestamp="1585642419492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="245" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585642419492" />
+    <state width="1344" height="245" key="GridCell.Tab.2.bottom" timestamp="1585642419494">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="245" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585642419494" />
+    <state width="1344" height="245" key="GridCell.Tab.2.center" timestamp="1585642419494">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="245" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1585642419494" />
+    <state width="1344" height="245" key="GridCell.Tab.2.left" timestamp="1585642419493">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="245" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1585642419493" />
+    <state width="1344" height="245" key="GridCell.Tab.2.right" timestamp="1585642419494">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="245" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1585642419494" />
+    <state x="108" y="0" key="SettingsEditor" timestamp="1585625196344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="108" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585625196344" />
     <state x="163" y="160" key="SettingsEditor/67.27.1213.997@67.27.1213.997" timestamp="1583241609611" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1583327450342">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state width="561" height="398" key="SwitcherDM" timestamp="1584582263028">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="561" height="398" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1584582263028" />
     <state width="498" height="446" key="SwitcherDM/67.27.1213.997@67.27.1213.997" timestamp="1583327450342" />
-    <state x="330" y="353" key="com.intellij.ide.util.TipDialog" timestamp="1584419742560">
-      <screen x="67" y="27" width="1213" height="997" />
+    <state x="296" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1586013826891">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="296" y="238" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586013826891" />
     <state x="330" y="353" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1584419742560" />
     <state x="338" y="165" width="662" height="720" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583213676233">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state x="338" y="165" width="662" height="720" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1213.997@67.27.1213.997" timestamp="1583213676233" />
+    <state x="254" y="98" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585625325641">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="254" y="98" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1585625325641" />
+    <state x="346" y="49" key="search.everywhere.popup" timestamp="1584582418514">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584582418514" />
     <state x="399" y="413" width="540" height="225" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1583239634178">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state x="399" y="413" width="540" height="225" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/67.27.1213.997@67.27.1213.997" timestamp="1583239634178" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

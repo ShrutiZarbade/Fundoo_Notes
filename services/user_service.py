@@ -4,110 +4,96 @@ Author: Shruti Zarbade
 Date: 10/3/2020
 
 """
-from config.mysql_connection import db_obj
+from model.db_query import Query
 import jwt
-# import cgi
-from config.redis_connection import Redis
-from vendor.sendmail import SmtpSendMail
-# send_mail = SmtpSendMail()
-# import smtplib
-redis_con = Redis()
+import cgi, os
+from config.redis_connection import RedisConnection
+from vendor.sendmail import SendMail
+send_mail_obj = SendMail()
+db_object = Query()
+redis_con = RedisConnection()
 
 
 class UserServices:
 
-    def register(self, **user_data):
+    def register(self, user_data, that=None):
         response = {
             "success": False,
             "message": "User not registered",
-            "data ": []
-        }
-        # import pdb
-        # pdb.set_trace()
+            }
+        user_email = user_data['email']
         table_name = "users"
-        print(table_name, "==========>table name")
 
-        read_data = db_obj.read(table_name=table_name, column_name=None, column_val=None)
-        print(read_data, "===========>read data")
+        # checking the email id  is available in table or not
+        read_data = db_object.read(table_name=table_name, column_name="email", column_val=user_email)
 
-        for data in read_data:
-            if data[1] == user_data['username'] or data[3] == user_data['email']:
-                response = {
-                    "success": True,
-                    "message": "User Already Registered"
-                }
-                break
-
-        if response["success"] == False:
-            db_obj.insert(data=user_data, table_name=table_name)
-            email = user_data['email']
-            print(email, "========>email")
-            read_last_data = db_obj.par_data(email)
-            print(read_last_data, "=========>read data")
-            user_email = read_last_data['email']
-            print(user_email, "========>from database")
-            user_id = read_last_data['id']
+        if read_data == []:
+            db_object.insert(data=user_data, table_name=table_name)
+            db_data = db_object.read(table_name=table_name, column_name="email", column_val=user_email)
+            db_id, db_email = db_data[0][0], db_data[0][2]
 
             # generate token for sending token on user mail
-            token = jwt.encode({'id': user_id}, 'secret', algorithm='HS256').decode('utf-8')
+            token = jwt.encode({'id': db_id}, 'secret', algorithm='HS256').decode('utf-8')
 
-            message = "Click the link to activate: http://127.0.0.1:8080/activate/?token='" + token + "'"
+            host = that.headers['Host']
+            protocol = that.protocol_version.split('/')[0].lower()
+
+            message = f"Click the link to activate: {protocol}://{host}/activate/?token={token} "
 
             # Calling send_mail function to pass the argument token and user mail
-            SmtpSendMail().send_mail(user_email, message)
+            send_mail_obj.send_mail(db_email, message)
 
-            response = {
-                "success": True,
-                "message": "User Registered successfully"
-            }
+            response['success'], response['message'] = True, "User Registered successfully"
+        else:
+            response['success'] = True
+            response['message'] = "User Already registered"
+
         return response
 
-    def activate(self, token=None):
-
-        payload = jwt.decode(token, 'secret', algorithms=['HS256'])
-        user_id = payload.get('id')
-        db_obj.update_data(user_id)
-
+    def activate(self, token):
         response = {
             "success": True,
-            "message": "You Are Activated!"
+            "message": "something went wrong"
+            }
+        payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        user_id = payload.get('id')
+        data = {
+            "id": user_id,
+            "is_active": True
         }
+        table_name = "users"
+        db_object.update(table_name=table_name, data=data)
+
+        response['success'], response['message'] = True, "User Activated successfully"
         return response
 
     def login(self, user_data):
-        smd = {
+        response = {
             "success": False,
             "message": "User not login",
             "data ": []
         }
-        #
-        print(user_data, '==========>userdata')
-        email = user_data['email']
-        print(email, '==============>useremail')
-        read_data = db_obj.par_data(email)
-        print(read_data, '=========>read data')
+        # unpacking the data from the user data
+        user_email = user_data['email']
+        user_password = user_data['password']
+        table_name = "users"
 
-        if read_data is not None:
-            db_id = read_data[0]
-            print(db_id, '============>db_id')
-            token = jwt.encode({'id': db_id}, 'secret', algorithm='HS256').decode('utf-8')
-            redis_con.set(db_id, token)
-            smd = {
-                'success': True,
-                'message': 'log in successfully',
-                'data': [token]
-            }
-        else:
-            smd = {
-                'success': True,
-                'message': 'User is not Registered'
-            }
-        return smd
+        # read the data from the database
+        read_data = db_object.read(table_name=table_name, column_name=None, column_val=None)
+
+        for data in read_data:
+            db_id, username, email, password, is_active = data
+            if email == user_email and password == user_password and is_active == 1:
+                token = jwt.encode({'id': db_id}, 'secret', algorithm='HS256').decode('utf-8')
+                redis_con.set(db_id, token)
+                response['success'] = True
+                response['message'] = "User Registered successfully"
+                response['data'] = token
+
+        return response
 
     def logout(self, that=None):
-
-        print(self, "==========>dir")
-        smd = {
+        response = {
             "success": False,
             "message": "something went wrong",
             "data": []
@@ -117,49 +103,98 @@ class UserServices:
         user_id = payload.get('id')
         redis_con.delete(user_id)
 
-        smd = {
-            "success": True,
-            "message": "User logout successfully",
-            "data": []
-        }
-        return smd
+        response['success'] = True
+        response['message'] = "User logout successfully"
+        return response
 
-    def forgot_password(self, user_data):
-        smd = {
+    def forgot_password(self, user_data, that=None):
+        response = {
             "success": False,
-            "meassage": "something went wrong",
+            "message": "something went wrong",
             "data": []
         }
-        import pdb
-        pdb.set_trace()
         user_email = user_data['email']
-        if user_email is not None:
-            token = jwt.encode({'id': user_email}, 'secret', algorithm='HS256').decode('utf-8')
 
-            message = "Click the link to reset password http://127.0.0.1:8080/resetpassword/'" + token + "'"
+        read_data = db_object.read(table_name="users", column_name="email", column_val=user_email)
 
-            SmtpSendMail().send_mail(user_email, message)
-        smd = {
-            "success": True,
-            "message": "Successfully mail is send to reset user password ",
-            "data": []
-        }
-        return smd
+        if read_data == []:
+            response['message'] = "This user is not registered"
 
-    def reset_password(self):
-        smd = {
+        else:
+            db_id = read_data[0][0]
+            token = jwt.encode({'id': db_id}, 'secret', algorithm='HS256').decode('utf-8')
+
+            host = that.headers['Host']
+            protocol = that.protocol_version.split('/')[0].lower()
+
+            # import pdb
+            # pdb.set_trace()
+
+            message = f"Click the link to reset password {protocol}://{host}/reset/?token={token}"
+
+            send_mail_obj.send_mail(user_email, message)
+            response['success'] = True
+            response['message'] = "Successfully mail is send to reset user password "
+
+            return response
+
+    def reset_password(self, user_data, token):
+        response = {
             "success": True,
             "message": "something went wrong",
             "data": []
         }
-        # message = {
-        #     'success': True,
-        #     'message': "click the below link ",
-        #     'data': [token]
-        # }
-        # smtp_obj = smtplib.SMTP('localhost')
-        # smtp_obj.sendmail(sender, receivers, message)
-        # print("successfully send mail")
+        user_password = user_data['password']
+        payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        user_id = payload.get('id')
+        data = {
+            "id": user_id,
+            "password": user_password
+        }
+        table_name = "users"
+        db_object.update(table_name=table_name, data=data)
+
+        response['success']=True,
+        response['message'] = "Your password is reset"
+        return response
+
+    def upload_profile(self, that=None):
+        try:
+            response = {
+                "success": False,
+                "message": "Something went wrong",
+                "data": []
+            }
+            ctype, pdict = cgi.parse_header(that.headers['content-type'])
+            pdict['boundary'] = bytes(pdict['boundary'], "utf-8")
+
+            if ctype == 'multipart/form-data':
+                form = cgi.FieldStorage(fp=that.rfile, headers=that.headers, environ={'REQUEST_METHOD': 'POST',
+                                        'CONTENT_TYPE': that.headers['Content-Type'], })
+                filename = form['upfile'].filename
+                data = form['upfile'].file.read()
+                open("./media/%s" % filename, "wb").write(data)
+
+                path = f"./media/{filename}"
+
+                token = that.headers['token']
+                payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+                user_id = payload.get('id')
+
+                data = {
+                    "path": path,
+                    "user_id": user_id
+                }
+
+                db_object.insert(data=data, table_name="profile")
+
+                response['success'] = True
+                response['message'] = "Successfully upload profile pic"
+
+        except Exception as e:
+            print(e)
+        return response
+
 
 
 
